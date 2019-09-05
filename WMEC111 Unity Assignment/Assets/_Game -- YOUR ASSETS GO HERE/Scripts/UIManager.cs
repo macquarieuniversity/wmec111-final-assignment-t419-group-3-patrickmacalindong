@@ -14,4 +14,16 @@ public class UIManager : MonoBehaviour
 
     public int scoreCounter;
     public Text scoreText;
+    public AudioSource winSound;
+    private bool _playerHasWon = false;
+
+    private void Update()
+    {
+        if (scoreCounter == 5 && !_playerHasWon)
+        {
+            scoreText.text = "You win. Number 1 victory royale.";
+            winSound.Play();
+            _playerHasWon = true;
+        }
+    }
 }

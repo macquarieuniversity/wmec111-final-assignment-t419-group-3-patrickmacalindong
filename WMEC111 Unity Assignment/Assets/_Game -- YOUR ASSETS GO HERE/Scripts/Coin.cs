@@ -11,7 +11,7 @@ public class Coin : MonoBehaviour
         if (col.CompareTag(hitTag))
         {
             UIManager.Instance.scoreCounter++;
-            UIManager.Instance.scoreText.text = "Score: " + UIManager.Instance.scoreCounter;
+            UIManager.Instance.scoreText.text = "Flares: " + UIManager.Instance.scoreCounter + "/5";
             gameObject.SetActive(false);
         }
     }
